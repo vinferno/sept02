@@ -1,3 +1,6 @@
+
+
+
 //PROTOTYPE FUNCTION TO HANDLE THE MULTILINE COMMNETS
 Function.prototype.convert_to_multiline_html = function() {
    var start_of_multiline = "/*!";
@@ -16,7 +19,7 @@ var html_list = function() {/*!
        <li onclick="getIndex(this)">Chess</li>
        <li onclick="getIndex(this)">Poker</li>
        <li onclick="getIndex(this)">Monopoly</li>
-       <li onclick="getIndex(this)">Scrabble</li>
+       <li id="hi" onclick="getIndex(this)">Scrabble</li>
     </ul>
 */}.convert_to_multiline_html();
 
@@ -24,6 +27,12 @@ var html_list = function() {/*!
 document.addEventListener('DOMContentLoaded', function() {
     document.body.innerHTML = html_list;
 });
+
+document.getElementById("hi").addEventListener("mouseover", function(){
+   alert("works");
+});
+
+ 
 
 
 function newGame() {
@@ -43,14 +52,19 @@ function delparent(e){
 
 function getIndex(node) {
     var childs = node.parentNode.children;
+   
     for (i = 0; i < childs.length; i++) {
         if (node == childs[i]) {
             var liList =document.body.getElementsByTagName('ul')[0].children;
             // liList[i].remove(liList[i]);
+
             if (liList[i].children.length == 0){
                // document.getElementsByTagName('div')[0].remove(document.getElementsByTagName('div'));
                 liList[i].innerHTML = liList[i].innerHTML + '<div onclick="delparent(this)"> - </div>';}
         }
     }
-    return i;
+
 }
+
+
+
