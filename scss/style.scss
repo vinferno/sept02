@@ -9,8 +9,8 @@ ul{
 	margin:0;
 	padding:0;
 	width: 100%;
+	box-sizing:border-box;
 }
-
 li{
 	width:530px;
 	height: 52px;
@@ -19,20 +19,20 @@ li{
 	list-style: none;
 	text-align: center;
 	margin:0 auto;
+	box-sizing:border-box;	
 	&:first-child{
 		background-color: lightgray;
-
 	}
+	position: relative;
 }
 
 div{
 	width:50px;
 	height:100%;
-	position: relative;
 	background-color: black;
 	color:white;
-	top: -46px;
-
+	position: relative;
+	top:-47px;
 }
 section{
 	width: 100%;
