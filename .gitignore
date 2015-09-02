@@ -41,3 +41,30 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Gulp related files #
+######################
+.DS_Store
+*.log
+node_modules
+build
+*.node
+components
+coverage
+*.orig
+.idea
+sandbox
+test/out-fixtures/*
+test/watch-*.txt
+gulp.1
+*.json
+
+# Meida files #
+######################
+*.mp4
+*.mp3
+*.mpeg
+*.mov
+*.avi
+*.wmv
+*.ogg
