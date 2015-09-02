@@ -21,6 +21,7 @@ li {
   text-align: center;
   margin: 0 auto;
   box-sizing: border-box;
+  position: relative;
 }
 li:first-child {
   background-color: lightgray;
@@ -29,10 +30,10 @@ li:first-child {
 div {
   width: 50px;
   height: 100%;
-  position: relative;
   background-color: black;
   color: white;
-  top: -52px;
+  position: relative;
+  top: -47px;
 }
 
 section {
