@@ -42,12 +42,13 @@ function delparent(e){
 }
 
 function getIndex(node) {
-    var childs = node.parentNode.childNodes;
+    var childs = node.parentNode.children;
     for (i = 0; i < childs.length; i++) {
         if (node == childs[i]) {
             var liList =document.body.getElementsByTagName('ul')[0].children;
             // liList[i].remove(liList[i]);
             if (liList[i].children.length == 0){
+               // document.getElementsByTagName('div')[0].remove(document.getElementsByTagName('div'));
                 liList[i].innerHTML = liList[i].innerHTML + '<div onclick="delparent(this)"> - </div>';}
         }
     }
