@@ -37,7 +37,7 @@ document.getElementById("hi").addEventListener("mouseover", function(){
 
 function newGame() {
     ngame=prompt("name");
-    if (ngame===null){
+    if (ngame===null || ngame===''){
     	return;
     }
     document.getElementsByTagName('ul')[0].innerHTML = document.getElementsByTagName('ul')[0].innerHTML + '<li onclick="getIndex(this)">'+ngame+"</li>";
