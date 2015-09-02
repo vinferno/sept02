@@ -9,6 +9,7 @@ ul{
 	margin:0;
 	padding:0;
 	width: 100%;
+	box-sizing:border-box;
 }
 
 li{
@@ -19,8 +20,10 @@ li{
 	list-style: none;
 	text-align: center;
 	margin:0 auto;
+	box-sizing:border-box;
 	&:first-child{
 		background-color: lightgray;
+
 
 	}
 }
@@ -31,7 +34,7 @@ div{
 	position: relative;
 	background-color: black;
 	color:white;
-	top: -46px;
+	top: -47px;
 
 }
 section{
