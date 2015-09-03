@@ -1,6 +1,7 @@
 
 
 
+
 //PROTOTYPE FUNCTION TO HANDLE THE MULTILINE COMMNETS
 Function.prototype.convert_to_multiline_html = function() {
    var start_of_multiline = "/*!";
@@ -25,49 +26,13 @@ var html_list = function() {/*!
 
 //WHEN THE DOM IS LOADED CREATE THE HTML ELEMENTS
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.innerHTML = html_list;
+    document.body.innerHTML = document.body.innerHTML + html_list;
 });
 
-document.getElementById("hi").addEventListener("mouseover", function(){
-   alert("works");
-});
+
 
  
 
-
-function newGame() {
-    ngame=prompt("name");
-    if (ngame===null || ngame===''){
-    	return;
-    }
-    document.getElementsByTagName('ul')[0].innerHTML = document.getElementsByTagName('ul')[0].innerHTML + '<li onclick="getIndex(this)">'+ngame+"</li>";
-    //alert(document.getElementsByTagName('ul')[0].length);
-};
-
-function removeGame() {
-    ngame=prompt("name");
-    document.getElementsByTagName('ul')[0].innerHTML = document.getElementsByTagName('ul')[0].innerHTML.replace('<li onclick="getIndex(this)">' + ngame+"</li>", '');
-};
-
-function delparent(e){
-    e.parentNode.parentNode.removeChild(e.parentNode);
-}
-
-function getIndex(node) {
-    var childs = node.parentNode.children;
-   
-    for (i = 0; i < childs.length; i++) {
-        if (node == childs[i]) {
-            var liList =document.body.getElementsByTagName('ul')[0].children;
-            // liList[i].remove(liList[i]);
-
-            if (liList[i].children.length == 0){
-               // document.getElementsByTagName('div')[0].remove(document.getElementsByTagName('div'));
-                liList[i].innerHTML = liList[i].innerHTML + '<div onclick="delparent(this)"> - </div>';}
-        }
-    }
-
-}
 
 
 
