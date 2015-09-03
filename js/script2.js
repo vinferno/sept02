@@ -59,8 +59,8 @@ function getIndex(node) {
                         liList[i].style.overflowX = "hidden";
                         liList[i].innerHTML = liList[i].innerHTML + "<br><hr>" + "<p>" + str1 + "</p>";
                     }
-                    }
-            }
+                }
+        }
 
     }
 
