@@ -13,13 +13,22 @@ ul{
 }
 li{
 	width:530px;
-	height: 52px;
+	
 	font-size: 40px;
 	border:1px solid black;
 	list-style: none;
 	text-align: center;
 	margin:0 auto;
 	box-sizing:border-box;	
+	max-height: 52px;
+
+
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+
+
 	&:first-child{
 		background-color: lightgray;
 	}
@@ -39,6 +48,9 @@ section{
 	height: 100%;
 }
 
+p{
+	padding:0px 50px;
+}
 @media screen and (max-width: 600px){
 	li{
 		width: 100%;
